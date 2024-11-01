@@ -47,7 +47,6 @@ public class Executable {
 
 			switch (option) {
 					case 1:
-
 						break;
 					case 2:
 
@@ -82,5 +81,4 @@ public class Executable {
         mainApp.run(flag);
 
     }
-
 }

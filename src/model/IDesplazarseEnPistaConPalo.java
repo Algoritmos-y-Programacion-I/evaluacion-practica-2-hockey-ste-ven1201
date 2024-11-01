@@ -1,5 +1,7 @@
 package model;
 
-public interface DesplazarseEnPistaConPalo {
+public interface IDesplazarseEnPistaConPalo {
     String desplazarseConPalo();
+    String pasarDisco(JugadorHockey jugador);
 }
+

@@ -1,6 +1,6 @@
 package model;
 
-public class JugadorHockey extends Persona implements DesplazarseEnPistaConPalo {
+public abstract class JugadorHockey extends Persona implements IDesplazarseEnPistaConPalo {
     protected String nombre;
     protected int numero;
     protected Posicion posicion;
@@ -24,6 +24,14 @@ public class JugadorHockey extends Persona implements DesplazarseEnPistaConPalo 
             return nombre + " se desplaza en la pista con el palo.";
         } else {
             return nombre + " es el portero y no se desplaza más allá de media pista.";
+        }
+    }
+
+    public String pasarDisco(JugadorHockey receptor) {
+        if (receptor != null && receptor != this) {
+            return "Jugador " + this.nombre + " le pasa el disco a Jugador " + receptor.nombre;
+        } else {
+            return "El pase no se puede realizar.";
         }
     }
 }
